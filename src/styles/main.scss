@@ -18,10 +18,14 @@ body {
   color: $green;
 }
 
+main {
+  position: relative;
+}
+
 .header {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 4rem 15px 0 15px;
+  padding: 4rem 15px 6rem 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -123,14 +127,116 @@ main {
     max-width: 37.5rem;
   }
   // .main__text
-  &__text {
-    font-size: 1.8rem;
-    line-height: 2.7rem;
-  }
+
   // .main__link
   &__link {
     display: inline-block;
-    margin-top: 6rem;
+    margin-top: 8rem;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20rem;
+  }
+  // .main__cover
+  &__cover {
+    display: flex;
+    flex-basis: 761px;
+    height: 761px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid rgba($green, 0.4);
+    position: relative;
+  }
+  // .main__line
+  &__line {
+    width: 656px;
+    height: 656px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: 1px solid rgba($green, 0.4);
+  }
+  // .main__image
+  &__image {
+    width: 95%;
+  }
+
+  // .main__btn
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    color: $green;
+    line-height: 2.2rem;
+    position: absolute;
+
+    &:hover {
+      .main__btn {
+        &::before {
+          background-color: $orange;
+          box-shadow: 0 0 0 5px $white, 0 0 0 6px $orange;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 11px;
+      height: 11px;
+      background-color: $green;
+      border-radius: 100%;
+      box-shadow: 0 0 0 5px $white, 0 0 0 6px $green;
+      position: absolute;
+    }
+
+    // .main__btn_1
+    &_1 {
+      top: 50px;
+      left: 50px;
+      &::before {
+        bottom: 0px;
+        right: -30px;
+      }
+    }
+
+    &_2 {
+      bottom: -47px;
+      right: 230px;
+      &::before {
+        top: -25px;
+        left: 10px;
+      }
+    }
+
+    &_3 {
+      top: 180px;
+      right: 10px;
+      &::before {
+        bottom: 15px;
+        left: -26px;
+      }
+    }
+  }
+  // .main__ingridient
+  &__ingridient {
+    display: block;
+    opacity: 0.8;
+  }
+}
+
+.description {
+  line-height: 2.7rem;
+
+  &_size-s {
+    font-size: 1.8rem;
   }
 }
 .link {
@@ -142,4 +248,20 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.032rem;
   color: $white;
+}
+
+.pepper {
+  position: absolute;
+  top: 595px;
+  left: 40px;
+}
+.avocado {
+  position: absolute;
+  top: 105px;
+  right: 0;
+}
+.tomato {
+  position: absolute;
+  right: 125px;
+  bottom: 125px;
 }
