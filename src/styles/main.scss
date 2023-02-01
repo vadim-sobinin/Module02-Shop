@@ -15,14 +15,13 @@ html {
 
 body {
   font-size: 1.6rem;
+  color: $green;
 }
 
 .header {
   max-width: 1410px;
   margin: 0 auto;
-  margin-top: 40px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 4rem 15px 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,4 +84,62 @@ body {
   background-repeat: no-repeat;
   width: 12rem;
   height: 3.2rem;
+}
+
+main {
+  background-image: url(../images/main1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title {
+  font-family: $font-cormorant;
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 8rem;
+
+  &__span {
+    font-style: italic;
+  }
+
+  &_block {
+    .title__span {
+      display: block;
+    }
+  }
+}
+.main {
+  // .main__item
+  &__item {
+    margin-left: 12rem;
+    max-width: 37.5rem;
+  }
+  // .main__text
+  &__text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+  // .main__link
+  &__link {
+    display: inline-block;
+    margin-top: 6rem;
+  }
+}
+.link {
+  box-shadow: 0 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
+  border-radius: 4rem;
+  padding: 2.5rem 4.3rem;
+  background-color: $orange;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.032rem;
+  color: $white;
 }
