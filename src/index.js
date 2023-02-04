@@ -10,6 +10,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper('.offerSwiper', {
   slidesPerView: 3,
   spaceBetween: 20,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
