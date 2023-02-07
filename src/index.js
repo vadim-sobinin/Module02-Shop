@@ -7,7 +7,22 @@ import './index.html';
 
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-const swiper = new Swiper('.offerSwiper', {
+const swiper1 = new Swiper('.offerSwiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  modules: [Navigation, Pagination],
+});
+
+const swiper2 = new Swiper('.trendsSwiper', {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
