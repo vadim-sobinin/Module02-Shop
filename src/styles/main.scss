@@ -884,3 +884,129 @@ p {
     }
   }
 }
+
+.contact {
+  padding-top: 64px;
+  // .contact__box
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .contact__item
+  &__item {
+  }
+  // .contact__title
+  &__title {
+    margin-bottom: 62px;
+    margin-top: 26px;
+  }
+  // .contact__info
+  &__info {
+    padding-left: 121px;
+    max-width: 380px;
+  }
+  // .contact__description
+  &__description {
+    margin-bottom: 60px;
+  }
+  // .contact__links
+  &__links {
+  }
+  // .contact__link
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: $green;
+
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+
+    &::before {
+      content: '';
+      width: 29px;
+      height: 29px;
+      display: inline-block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &-tel::before {
+      background-image: url(../images/phone.svg);
+    }
+    &-mail::before {
+      background-image: url(../images/mail.svg);
+    }
+  }
+  // .contact__form
+  &__form {
+    flex-basis: 589px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 32px 59px 38px;
+  max-width: 589px;
+
+  border: 2px solid rgba($green, 0.4);
+  border-radius: 20px;
+
+  // .form__title
+  &__title {
+    font-family: $font-cormorant;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  // .form__label
+  &__label {
+    margin-left: 4px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  // .form__input
+  &__input {
+    padding: 22px 31px;
+    border-radius: 20px;
+    border: 1px solid rgba($green, 0.4);
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 43px;
+    }
+
+    &:focus {
+      border: 1px solid $green;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 1px solid red;
+    }
+  }
+
+  // .form__btn
+  &__btn {
+    max-width: 260px;
+    border: 2px solid $orange;
+    margin-bottom: 19px;
+  }
+
+  // .form__agreement
+  &__agreement {
+    max-width: 355px;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    line-height: 1.8rem;
+
+    &-link {
+      color: $green;
+    }
+  }
+}
