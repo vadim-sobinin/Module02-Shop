@@ -887,6 +887,8 @@ p {
 
 .contact {
   padding-top: 64px;
+  padding-bottom: 160px;
+
   // .contact__box
   &__box {
     display: flex;
@@ -1007,6 +1009,127 @@ p {
 
     &-link {
       color: $green;
+    }
+  }
+}
+
+.footer {
+  padding-bottom: 84px;
+
+  &__break-line {
+    width: 100%;
+    height: 1px;
+    background-color: $green;
+    margin-bottom: 81px;
+  }
+  // .footer_logo
+  &__logo {
+    width: 17.9rem;
+    height: 4.8rem;
+    background-size: contain;
+  }
+  // .footer_author
+  &_author {
+  }
+  // .footer_author-link
+  &_author-link {
+  }
+
+  // .footer__top
+  &__top {
+    display: flex;
+    gap: 307px;
+    margin-bottom: 55px;
+  }
+
+  // .footer__content
+  &__content {
+    display: flex;
+    max-width: 955px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  // .footer__list
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1.8rem;
+  }
+  // .footer__item
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  // .footer__link
+  &__link {
+    text-decoration: none;
+    color: $green;
+  }
+  // .footer__contact
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+  // .footer__tel
+  &__tel {
+    font-size: 2.7rem;
+    text-decoration: none;
+    color: $green;
+    margin-bottom: 28px;
+  }
+  // .footer__mail
+  &__mail {
+    text-decoration: none;
+    color: $green;
+    font-size: 1.8rem;
+    margin-bottom: 29px;
+  }
+  // .footer__bottom
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .footer__copy
+  &__copy {
+  }
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  // .social__item
+  &__item {
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    border: 2px solid $green;
+    border-radius: 100%;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  // .social__link
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px 18px;
+
+    &_vk {
+      background-image: url(../images/vk.svg);
+    }
+    // .social__link_inst
+    &_inst {
+      background-image: url(../images/insta.svg);
+    }
+    // .social__link_fb
+    &_fb {
+      background-image: url(../images/fb.svg);
     }
   }
 }
